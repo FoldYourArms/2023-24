@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cute Animals Gallery</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #007bff;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 10px;
+    }
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cute Animals Gallery</h1>
+    <div class="gallery">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 1">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 2">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 3">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 4">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 5">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 6">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 7">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 8">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 9">
+        <img src="https://placeimg.com/200/200/animals" alt="Cute Animal 10">
+    </div>
+</div>
+
+</body>
+</html>

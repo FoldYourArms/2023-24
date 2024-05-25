@@ -1,0 +1,278 @@
+<HTML>
+<HEAD>
+<Title>My First Web Page</Title>
+</HEAD>
+
+<BODY>
+Hello, World.
+
+  <h1>Test Script</h1>
+  <button onclick="testFunction()">Click Me</button>
+  <script>
+    function testFunction() {
+      alert('Script is working!');
+    }
+  </script>
+
+
+  <style>
+    .styled-button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    
+    .link-button {
+      background-color: #008CBA; /* Blue */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Examples of Buttons as Hyperlinks</h1>
+
+  <!-- Button wrapped in a link -->
+  <a href="https://www.example.com">
+    <button class="styled-button">Go to Example.com</button>
+  </a>
+
+  <!-- Styled link -->
+  <a href="https://www.example.com" class="link-button">Go to Example.com</a>
+
+  <!-- Button with onclick event -->
+  <button class="styled-button" onclick="window.location.href='https://www.example.com';">Go to Example.com</button>
+</body>
+</html>
+
+
+
+<input type="submit" value="Submit">
+
+<style>
+  .tooltip-button {
+    position: relative;
+    display: inline-block;
+    border: none;
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .tooltip-button .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the button */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip-button .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Arrow at the bottom */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  .tooltip-button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<button class="tooltip-button">
+  Hover Me
+  <span class="tooltiptext">Tooltip Text</span>
+</button>
+
+
+<style>
+  .loading-button {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .loading-button .spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .loading-button.loading .spinner {
+    display: block;
+  }
+
+  .loading-button.loading span {
+    visibility: hidden;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+<button class="loading-button" onclick="this.classList.add('loading'); setTimeout(() => this.classList.remove('loading'), 3000);">
+  <span>Load Data</span>
+  <div class="spinner"></div>
+</button>
+
+
+
+<style>
+  .ripple-button {
+    position: relative;
+    overflow: hidden;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .ripple-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10,10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+  }
+
+  .ripple-button:active::after {
+    transform: scale(0,0);
+    opacity: 0.3;
+    transition: 0s;
+  }
+</style>
+
+<button class="ripple-button">Ripple Effect</button>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+  .icon-button {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .icon-button i {
+    margin-right: 8px;
+  }
+</style>
+
+<button class="icon-button">
+  <i class="fas fa-thumbs-up"></i> Like
+</button>
+
+
+<button>Click Me</button>
+<style>
+  .styled-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+</style>
+
+<button class="styled-button">Styled Button</button>
+
+
+
+<style>
+  .hover-button {
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .hover-button:hover {
+    background-color: #005f73; /* Darker blue */
+  }
+</style>
+
+<button class="hover-button">Hover Me</button>
+
+</BODY>
+</HTML>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glitter Trail with AI</title>
+<style>
+  body {
+    background-color: blue;
+    font-family: Chewy, Times New Roman;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    text-align: center;
+    margin-top: 20vh;
+  }
+  h1 {
+    color: white;
+    font-size: 4em;
+  }
+  p {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .glitter {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Hello World</h1>
+  <p>
+    Artificial Intelligence (AI) is a transformative technology that enables machines to perform tasks that typically require human intelligence. From improving efficiency in various industries to enhancing our daily lives, AI has the potential to revolutionize how we work, communicate, and interact with the world around us. Its applications span from natural language processing and computer vision to robotics and autonomous vehicles, continually pushing the boundaries of what's possible.
+  </p>
+</div>
+<div id="glitter-container"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById("glitter-container");
+    document.addEventListener("mousemove", function(event) {
+      const glitter = document.createElement("div");
+      glitter.className = "glitter";
+      const x = event.clientX;
+      const y = event.clientY;
+      glitter.style.left = x + "px";
+      glitter.style.top = y + "px";
+      container.appendChild(glitter);
+      setTimeout(function()
+              container.removeChild(glitter);
+
+
+      }, 1500);
+    });
+  });
+</script>
+</body>
+</html>

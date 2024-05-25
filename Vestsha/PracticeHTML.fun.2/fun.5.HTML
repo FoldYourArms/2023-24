@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #007bff;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    .button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to the Fun Page!</h1>
+    <p>Click the buttons below to see some fun effects!</p>
+    <button class="button" onclick="changeBackgroundColor()">Change Background Color</button>
+    <button class="button" onclick="showRandomEmoji()">Show Random Emoji</button>
+</div>
+
+<script>
+    function changeBackgroundColor() {
+        const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99', '#ff99ff', '#99ffff'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+    }
+
+    function showRandomEmoji() {
+        const emojis = ['😀', '😎', '😂', '🥳', '😍', '🤩', '🎉', '🚀', '🌈'];
+        const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+        alert('Random Emoji: ' + randomEmoji);
+    }
+</script>
+
+</body>
+</html>
