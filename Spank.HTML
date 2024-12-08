@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREAKING NEWS: Utah Votes on School Spanking!</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #b80000;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: bounce 2s infinite; /* Bouncing header text */
+        }
+        .breaking {
+            background-color: yellow;
+            color: red;
+            padding: 5px 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out; /* Fading effect */
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #b80000;
+            text-align: center;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .content h2:hover {
+            color: #ff8000; /* Interactive hover effect */
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+        }
+        ul {
+            list-style-type: square;
+        }
+        ul li {
+            transition: transform 0.2s;
+        }
+        ul li:hover {
+            transform: scale(1.1); /* Slight zoom-in on hover */
+            color: #b80000;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        // Add interactivity: Click headline to reveal "Breaking" details
+        document.addEventListener('DOMContentLoaded', () => {
+            const headline = document.querySelector('.content h2');
+            const breakingDiv = document.querySelector('.breaking');
+
+            headline.addEventListener('click', () => {
+                breakingDiv.textContent = "JUST IN: Teachers are already practicing their SPANK talks!";
+                breakingDiv.style.backgroundColor = "#ffcccb"; // Change background color on click
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Satirical News Network (SNN)</h1>
+    </header>
+    <div class="breaking">
+        BREAKING: Utah Votes to Allow Spanking in Schools!
+    </div>
+    <div class="content">
+        <h2>"The Paddle Comeback of 2024"</h2>
+        <p>In a surprising and completely made-up turn of events, Utah lawmakers have passed a new resolution allowing public school teachers to administer <strong>gentle and educational spankings</strong> to misbehaving students. The vote, which was "unanimous" according to this totally fictional report, has sparked waves of laughter, applause, and nervous chuckles in classrooms statewide.</p>
+        
+        <p>The new policy, nicknamed <strong>"Operation Time-Out Turbo"</strong>, is designed to "encourage better hallway etiquette, reduce gum-chewing infractions, and eliminate unnecessary TikTok dances during math class." Supporters claim it will help students "stay on task while maintaining their TikTok-worthy sense of humor."</p>
+
+        <p class="quote">"We believe this policy will provide the structure and paddling—err, guidance—students need to thrive in today's world," said Dr. Ima Joking, a spokesperson for the Department of Totally Fake Policies.</p>
+
+        <p>Parents across the state are already rushing to buy their own custom paddles engraved with phrases like "Love You But Stop Talking" and "Silent but Smart." Meanwhile, students are reportedly Googling, "How to sit comfortably after a teacher conference."</p>
+
+        <h3>How Does It Work?</h3>
+        <p>Teachers will now be equipped with an official "SPANK" training program, which stands for:</p>
+        <ul>
+            <li><strong>S</strong>hort</li>
+            <li><strong>P</strong>ersonal</li>
+            <li><strong>A</strong>dvice for</li>
+            <li><strong>N</strong>urturing</li>
+            <li><strong>K</strong>ids</li>
+        </ul>
+
+        <p>Remember, kids: it's all in good fun. Or at least that's what they'll say while walking funny for the rest of the day!</p>
+    </div>
+    <footer>
+        This article is 100% fictional and meant for laughs. © Satirical News Network 2024
+    </footer>
+</body>
+</html>
